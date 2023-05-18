@@ -1,8 +1,12 @@
 {
   "posts": [
     {
-      "id": "5c3255ba-881c-44ce-8a7e-076237abf19b",
+      "id": "d3a78cdb-9bf4-4d00-9023-220b60d7b63b",
       "text": "test"
+    },
+    {
+      "id": "b56eaf04-c862-434c-9477-dc6332c00f63",
+      "text": "test2"
     }
   ]
 }

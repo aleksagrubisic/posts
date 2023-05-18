@@ -16,6 +16,7 @@ const UpdatePost = ({updatedPostHandler, updatedPostID}) => {
   }
 
   const updateHandler = () => {
+    // Trim
     if(updatedPost !== '') {
       update({
         id: updatedPostID,
