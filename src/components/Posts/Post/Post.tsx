@@ -1,8 +1,8 @@
-import React from 'react'
+import React, { ReactNode } from 'react'
 import Button from '../../UI/Button/Button';
 import {usePostContext} from '../../../context/posts.context';
 
-const Post = ({children, id, onUpdate}) => {
+const Post: React.FC<{children: ReactNode, id: string, onUpdate: (id: string | null) => void}> = ({children, id, onUpdate}) => {
 
   const {remove} = usePostContext();
 

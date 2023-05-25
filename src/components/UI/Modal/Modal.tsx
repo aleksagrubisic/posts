@@ -1,9 +1,9 @@
-import React, {useState} from 'react';
+import React, { ReactNode } from 'react';
 import ReactDOM from 'react-dom';
 
 import styles from './Modal.module.css';
 
-const Modal = ({children, }) => {
+const Modal: React.FC<{children: ReactNode}> = ({children}) => {
 
   return (
     <>
@@ -14,7 +14,7 @@ const Modal = ({children, }) => {
             {children}
           </div>
         </div>,
-        document.getElementById('modal')
+        document.getElementById('modal')!
       )}
     </>
     )

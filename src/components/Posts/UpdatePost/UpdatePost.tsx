@@ -5,13 +5,13 @@ import Button from '../../UI/Button/Button';
 import Modal from '../../UI/Modal/Modal';
 import {usePostContext} from '../../../context/posts.context';
 
-const UpdatePost = ({updatedPostHandler, updatedPostID}) => {
+const UpdatePost: React.FC<{updatedPostHandler: (id: string | null) => void, updatedPostID: string}> = ({updatedPostHandler, updatedPostID}) => {
 
   const [updatedPost, setUpdatedPost] = useState('');
 
   const {update} = usePostContext();
 
-  const newPostHandler = (e) => {
+  const newPostHandler = (e: React.ChangeEvent<HTMLInputElement>) => {
     setUpdatedPost(e.target.value);
   }
 
@@ -19,7 +19,7 @@ const UpdatePost = ({updatedPostHandler, updatedPostID}) => {
     if(updatedPost !== '') {
       update({
         id: updatedPostID,
-        text: updatedPost
+        text: updatedPost.trim()
       })
       setUpdatedPost('');
       updatedPostHandler(null);

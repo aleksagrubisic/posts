@@ -1,7 +1,7 @@
-import React from 'react';
+import React, {ReactNode} from 'react';
 import {PostProvider} from './posts.context';
 
-const ApplicationContext = ({children}) => {
+const ApplicationContext: React.FC<{children: ReactNode}> = ({children}) => {
   return (
     <PostProvider>
       {children}
