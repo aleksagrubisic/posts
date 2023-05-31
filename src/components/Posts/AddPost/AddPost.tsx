@@ -5,6 +5,7 @@ import Input from '../../UI/Input/Input';
 import Button from '../../UI/Button/Button';
 import {usePostContext} from '../../../context/posts.context';
 
+// Ovde ne moras da definises type React.FC
 const AddPost: React.FC = () => {
 
   const [newTask, setNewTask] = useState('');

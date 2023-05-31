@@ -27,6 +27,8 @@ export const PostProvider: React.FC<{children: ReactNode}> = ({children}) => {
   const {result: removeResult, isLoading: removeIsLoading, error: removeError, sendRequest: removeSendRequest} = useAxios();
 
   useEffect(() => {
+    // Ove loadinge i errore mozes cak i pojedinacno da koristis
+    // Npr. da imas poseban spinner u dugmetu kada stisnes create ili update, a poseban na mestu gde se loaduju post-ovi
     if(getIsLoading || createIsLoading || updateIsLoading || removeIsLoading) {
       setIsLoading(true);
     } else {
